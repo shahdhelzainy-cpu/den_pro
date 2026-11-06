@@ -1,0 +1,923 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="BNU Dental Care — Connecting patients with dental students for clinical case opportunities and organized communication.">
+    <meta name="theme-color" content="#102d4f">
+
+    <title>BNU Dental Care | Dental Case Connection Platform</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Background decoration -->
+    <div class="ambient ambient-one"></div>
+    <div class="ambient ambient-two"></div>
+
+    <!-- FIRST VISIT PREFERENCES -->
+    <section class="preferences-screen" id="preferencesScreen">
+        <div class="preferences-card">
+
+            <div class="brand brand-centered">
+                <div class="brand-icon">
+                    <i class="fa-solid fa-tooth"></i>
+                    <span class="brand-tech">
+                        <i class="fa-solid fa-microchip"></i>
+                    </span>
+                </div>
+
+                <div class="brand-name">
+                    <h2>BNU <span>Dental Care</span></h2>
+                    <p>SMART DENTAL CASE PLATFORM</p>
+                </div>
+            </div>
+
+            <div class="preferences-heading">
+                <span class="eyebrow" data-i18n="welcomeLabel">WELCOME TO YOUR DENTAL HUB</span>
+                <h1 data-i18n="welcomeTitle">Let's personalize your experience.</h1>
+                <p data-i18n="welcomeDescription">
+                    Choose your preferred language and appearance before getting started.
+                </p>
+            </div>
+
+            <div class="preference-group">
+                <label data-i18n="languageLabel">Choose your language</label>
+
+                <div class="choice-grid">
+                    <button class="choice-button active" data-language="en">
+                        <span class="choice-symbol">EN</span>
+                        <span>English</span>
+                        <i class="fa-solid fa-circle-check choice-check"></i>
+                    </button>
+
+                    <button class="choice-button" data-language="ar">
+                        <span class="choice-symbol">ع</span>
+                        <span>العربية</span>
+                        <i class="fa-solid fa-circle-check choice-check"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="preference-group">
+                <label data-i18n="appearanceLabel">Choose your appearance</label>
+
+                <div class="choice-grid">
+                    <button class="choice-button active" data-theme="light">
+                        <span class="choice-symbol">
+                            <i class="fa-solid fa-sun"></i>
+                        </span>
+                        <span data-i18n="lightMode">Light Mode</span>
+                        <i class="fa-solid fa-circle-check choice-check"></i>
+                    </button>
+
+                    <button class="choice-button" data-theme="dark">
+                        <span class="choice-symbol">
+                            <i class="fa-solid fa-moon"></i>
+                        </span>
+                        <span data-i18n="darkMode">Dark Mode</span>
+                        <i class="fa-solid fa-circle-check choice-check"></i>
+                    </button>
+                </div>
+            </div>
+
+            <button class="primary-button full-button" id="continueButton">
+                <span data-i18n="continue">Continue</span>
+                <i class="fa-solid fa-arrow-right"></i>
+            </button>
+
+            <p class="preferences-note">
+                <i class="fa-solid fa-shield-halved"></i>
+                <span data-i18n="preferencesNote">
+                    You can change these preferences anytime.
+                </span>
+            </p>
+
+        </div>
+    </section>
+
+
+    <!-- MAIN WEBSITE -->
+    <div class="website hidden" id="website">
+
+        <!-- NAVBAR -->
+        <header class="navbar" id="navbar">
+
+            <a href="#home" class="brand navbar-brand">
+                <div class="brand-icon">
+                    <i class="fa-solid fa-tooth"></i>
+                    <span class="brand-tech">
+                        <i class="fa-solid fa-microchip"></i>
+                    </span>
+                </div>
+
+                <div class="brand-name">
+                    <h2>BNU <span>Dental Care</span></h2>
+                    <p>SMART DENTAL CASE PLATFORM</p>
+                </div>
+            </a>
+
+            <nav class="nav-links" id="navLinks">
+                <a href="#home" class="nav-link active" data-i18n="navHome">Home</a>
+                <a href="#about" class="nav-link" data-i18n="navAbout">About</a>
+                <a href="#services" class="nav-link" data-i18n="navServices">Services</a>
+                <a href="#how" class="nav-link" data-i18n="navHow">How It Works</a>
+                <a href="#contact" class="nav-link" data-i18n="navContact">Contact</a>
+            </nav>
+
+            <div class="navbar-actions">
+
+                <button class="icon-button" id="languageToggle" aria-label="Change language">
+                    <i class="fa-solid fa-language"></i>
+                    <span id="languageText">AR</span>
+                </button>
+
+                <button class="icon-button" id="themeToggle" aria-label="Change appearance">
+                    <i class="fa-solid fa-moon" id="themeIcon"></i>
+                </button>
+
+                <a href="#portals" class="nav-login" data-i18n="login">Log In</a>
+
+                <a href="#portals" class="primary-button nav-signup">
+                    <span data-i18n="getStarted">Get Started</span>
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+
+                <button class="mobile-menu-button" id="mobileMenuButton"
+                        aria-label="Open navigation menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+            </div>
+        </header>
+
+
+        <!-- HERO SECTION -->
+        <main>
+
+            <section class="hero section-container" id="home">
+
+                <div class="hero-content">
+
+                    <div class="hero-badge">
+                        <span class="status-dot"></span>
+                        <span data-i18n="heroBadge">A smarter approach to dental case connection</span>
+                    </div>
+
+                    <h1 data-i18n="heroTitle">
+                        Your Dental Care Journey,
+                        <span>Connected & Simplified.</span>
+                    </h1>
+
+                    <p class="hero-description" data-i18n="heroDescription">
+                        Connecting patients with dental students through
+                        a smarter clinical case platform. Patients can share
+                        their dental cases, while students discover opportunities
+                        to fulfill their clinical requirements.
+                    </p>
+
+                    <div class="hero-actions">
+                        <a href="#portals" class="primary-button hero-button">
+                            <span data-i18n="heroGetStarted">Get Started</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+
+                        <a href="#how" class="secondary-button hero-button">
+                            <i class="fa-regular fa-circle-play"></i>
+                            <span data-i18n="explorePlatform">Explore Platform</span>
+                        </a>
+                    </div>
+
+                    <div class="hero-trust">
+                        <div class="trust-avatars">
+                            <span><i class="fa-solid fa-user"></i></span>
+                            <span><i class="fa-solid fa-user-graduate"></i></span>
+                            <span><i class="fa-solid fa-tooth"></i></span>
+                        </div>
+
+                        <div>
+                            <strong data-i18n="trustTitle">One connected platform</strong>
+                            <p data-i18n="trustDescription">
+                                Designed for patients and dental students
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <!-- HERO VISUAL -->
+                <div class="hero-visual">
+
+                    <div class="visual-glow"></div>
+
+                    <div class="hero-image-card">
+                        <div class="image-top-label">
+                            <span class="live-indicator"></span>
+                            <span data-i18n="smartCare">SMART DENTAL CASE EXPERIENCE</span>
+                        </div>
+
+                        <div class="tooth-illustration">
+                            <div class="tooth-orbit orbit-one"></div>
+                            <div class="tooth-orbit orbit-two"></div>
+
+                            <div class="tooth-main">
+                                <i class="fa-solid fa-tooth"></i>
+                            </div>
+
+                            <div class="orbit-icon orbit-icon-one">
+                                <i class="fa-solid fa-heart-pulse"></i>
+                            </div>
+
+                            <div class="orbit-icon orbit-icon-two">
+                                <i class="fa-solid fa-microchip"></i>
+                            </div>
+
+                            <div class="orbit-icon orbit-icon-three">
+                                <i class="fa-solid fa-shield-heart"></i>
+                            </div>
+                        </div>
+
+                        <div class="visual-caption">
+                            <span data-i18n="visualCaption">Care meets connection</span>
+                            <p data-i18n="visualSubcaption">
+                                From publishing a case to connecting with a student.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="floating-card floating-card-top">
+                        <div class="floating-icon blue-icon">
+                            <i class="fa-solid fa-user-graduate"></i>
+                        </div>
+                        <div>
+                            <strong data-i18n="floatingDoctor">Dental Students</strong>
+                            <span data-i18n="floatingDoctorSub">Discover clinical cases</span>
+                        </div>
+                        <i class="fa-solid fa-circle-check floating-check"></i>
+                    </div>
+
+                    <div class="floating-card floating-card-bottom">
+                        <div class="floating-icon green-icon">
+                            <i class="fa-solid fa-file-medical"></i>
+                        </div>
+                        <div>
+                            <strong data-i18n="floatingHistory">Dental Cases</strong>
+                            <span data-i18n="floatingHistorySub">Your cases, organized</span>
+                        </div>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- TRUST STRIP -->
+            <section class="trust-strip">
+                <div class="section-container trust-strip-inner">
+                    <div>
+                        <i class="fa-solid fa-user-group"></i>
+                        <span data-i18n="trustOne">Patient-focused experience</span>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-tooth"></i>
+                        <span data-i18n="trustTwo">Dental case management</span>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-lock"></i>
+                        <span data-i18n="trustThree">Privacy-conscious design</span>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-comments"></i>
+                        <span data-i18n="trustFour">Private case communication</span>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- ABOUT -->
+            <section class="section section-container" id="about">
+
+                <div class="section-heading">
+                    <span class="eyebrow" data-i18n="aboutEyebrow">ABOUT THE PLATFORM</span>
+
+                    <h2 data-i18n="aboutTitle">
+                        Bringing Dental Care
+                        <span>Closer to Everyone.</span>
+                    </h2>
+
+                    <p data-i18n="aboutDescription">
+                        BNU Dental Care connects patients who need dental care
+                        with dental students looking for clinical cases to fulfill
+                        their academic requirements in a more organized way.
+                    </p>
+                </div>
+
+                <div class="about-grid">
+
+                    <div class="about-card about-main-card">
+                        <div class="about-icon">
+                            <i class="fa-solid fa-link"></i>
+                        </div>
+
+                        <h3 data-i18n="aboutCardOneTitle">One Connected Experience</h3>
+
+                        <p data-i18n="aboutCardOneDescription">
+                            Bring case publishing, student requests,
+                            patient approval, and private communication
+                            together in one organized platform.
+                        </p>
+
+                        <span class="card-decoration">01</span>
+                    </div>
+
+                    <div class="about-card">
+                        <div class="about-icon">
+                            <i class="fa-solid fa-hand-holding-medical"></i>
+                        </div>
+
+                        <h3 data-i18n="aboutCardTwoTitle">Patient First</h3>
+
+                        <p data-i18n="aboutCardTwoDescription">
+                            Patients can publish their dental concerns,
+                            review student requests, and choose who
+                            will be assigned to their case.
+                        </p>
+                    </div>
+
+                    <div class="about-card">
+                        <div class="about-icon">
+                            <i class="fa-solid fa-user-graduate"></i>
+                        </div>
+
+                        <h3 data-i18n="aboutCardThreeTitle">Dental Student Workspace</h3>
+
+                        <p data-i18n="aboutCardThreeDescription">
+                            Dental students can explore public cases,
+                            send requests, and manage cases assigned
+                            to them for clinical requirements.
+                        </p>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- SERVICES -->
+            <section class="section services-section" id="services">
+
+                <div class="section-container">
+
+                    <div class="section-heading">
+                        <span class="eyebrow" data-i18n="servicesEyebrow">WHAT WE OFFER</span>
+
+                        <h2 data-i18n="servicesTitle">
+                            Everything in One
+                            <span>Dental Hub.</span>
+                        </h2>
+
+                        <p data-i18n="servicesDescription">
+                            Purpose-built features for patients and dental students.
+                        </p>
+                    </div>
+
+                    <div class="services-grid">
+
+                        <article class="service-card">
+                            <div class="service-icon">
+                                <i class="fa-solid fa-file-circle-plus"></i>
+                            </div>
+                            <h3 data-i18n="serviceOneTitle">Case Publishing</h3>
+                            <p data-i18n="serviceOneDescription">
+                                Patients can share dental concerns with
+                                descriptions, images, and voice recordings.
+                            </p>
+                            <span class="service-number">01</span>
+                        </article>
+
+                        <article class="service-card">
+                            <div class="service-icon">
+                                <i class="fa-solid fa-stethoscope"></i>
+                            </div>
+                            <h3 data-i18n="serviceTwoTitle">Case Requests & Assignment</h3>
+                            <p data-i18n="serviceTwoDescription">
+                                Students request available cases.
+                                Patients review requests and select one student
+                                to be assigned to each case.
+                            </p>
+                            <span class="service-number">02</span>
+                        </article>
+
+                        <article class="service-card">
+                            <div class="service-icon">
+                                <i class="fa-solid fa-comments"></i>
+                            </div>
+                            <h3 data-i18n="serviceThreeTitle">Private Communication</h3>
+                            <p data-i18n="serviceThreeDescription">
+                                A private chat becomes available only
+                                after the patient accepts a student's request.
+                            </p>
+                            <span class="service-number">03</span>
+                        </article>
+
+                        <article class="service-card">
+                            <div class="service-icon">
+                                <i class="fa-solid fa-folder-open"></i>
+                            </div>
+                            <h3 data-i18n="serviceFourTitle">Case History</h3>
+                            <p data-i18n="serviceFourDescription">
+                                Patients and students can keep track
+                                of their cases and their progress.
+                            </p>
+                            <span class="service-number">04</span>
+                        </article>
+
+                        <article class="service-card">
+                            <div class="service-icon">
+                                <i class="fa-solid fa-microphone-lines"></i>
+                            </div>
+                            <h3 data-i18n="serviceFiveTitle">Voice & Media</h3>
+                            <p data-i18n="serviceFiveDescription">
+                                Support visual and audio communication
+                                for clearer case descriptions.
+                            </p>
+                            <span class="service-number">05</span>
+                        </article>
+
+                        <article class="service-card">
+                            <div class="service-icon">
+                                <i class="fa-solid fa-graduation-cap"></i>
+                            </div>
+                            <h3 data-i18n="serviceSixTitle">Clinical Requirements</h3>
+                            <p data-i18n="serviceSixDescription">
+                                Help dental students organize their
+                                assigned cases and clinical progress.
+                            </p>
+                            <span class="service-number">06</span>
+                        </article>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- HOW IT WORKS -->
+            <section class="section section-container" id="how">
+
+                <div class="section-heading">
+                    <span class="eyebrow" data-i18n="howEyebrow">SIMPLE BY DESIGN</span>
+
+                    <h2 data-i18n="howTitle">
+                        How BNU Dental Care
+                        <span>Works.</span>
+                    </h2>
+
+                    <p data-i18n="howDescription">
+                        A clear process connecting patients with dental students.
+                    </p>
+                </div>
+
+                <div class="workflow-grid">
+
+                    <div class="workflow-card">
+                        <span class="workflow-step">01</span>
+                        <i class="fa-solid fa-user-plus"></i>
+                        <h3 data-i18n="stepOneTitle">Create an Account</h3>
+                        <p data-i18n="stepOneDescription">
+                            Create a patient account or a dental student account.
+                        </p>
+                    </div>
+
+                    <div class="workflow-card">
+                        <span class="workflow-step">02</span>
+                        <i class="fa-solid fa-file-medical"></i>
+                        <h3 data-i18n="stepTwoTitle">Publish or Discover Cases</h3>
+                        <p data-i18n="stepTwoDescription">
+                            Patients publish cases, and dental students
+                            explore the available public cases.
+                        </p>
+                    </div>
+
+                    <div class="workflow-card">
+                        <span class="workflow-step">03</span>
+                        <i class="fa-solid fa-user-check"></i>
+                        <h3 data-i18n="stepThreeTitle">Request & Get Accepted</h3>
+                        <p data-i18n="stepThreeDescription">
+                            Students send requests. The patient reviews
+                            them and accepts one student for the case.
+                        </p>
+                    </div>
+
+                    <div class="workflow-card">
+                        <span class="workflow-step">04</span>
+                        <i class="fa-solid fa-comments"></i>
+                        <h3 data-i18n="stepFourTitle">Start Private Communication</h3>
+                        <p data-i18n="stepFourDescription">
+                            After acceptance, the assigned student
+                            and patient can communicate through private chat.
+                        </p>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- PORTAL SELECTION -->
+            <section class="portal-section" id="portals">
+
+                <div class="section-container">
+
+                    <div class="section-heading portal-heading">
+                        <span class="eyebrow" data-i18n="portalEyebrow">GET STARTED</span>
+
+                        <h2 data-i18n="portalTitle">
+                            Choose Your
+                            <span>Portal.</span>
+                        </h2>
+
+                        <p data-i18n="portalDescription">
+                            Select the experience that matches your role.
+                        </p>
+                    </div>
+
+                    <div class="portal-grid">
+
+                        <article class="portal-card patient-portal">
+
+                            <div class="portal-card-top">
+                                <div class="portal-icon">
+                                    <i class="fa-solid fa-user"></i>
+                                </div>
+                                <span class="portal-label" data-i18n="patientLabel">FOR PATIENTS</span>
+                            </div>
+
+                            <h3 data-i18n="patientPortalTitle">Your Care, Your Way.</h3>
+
+                            <p data-i18n="patientPortalDescription">
+                                Publish your dental case, review student
+                                requests, communicate with your assigned
+                                student, and follow your case progress.
+                            </p>
+
+                            <ul>
+                                <li><i class="fa-solid fa-check"></i><span data-i18n="patientFeatureOne">Publish dental cases</span></li>
+                                <li><i class="fa-solid fa-check"></i><span data-i18n="patientFeatureTwo">Review and accept student requests</span></li>
+                                <li><i class="fa-solid fa-check"></i><span data-i18n="patientFeatureThree">Chat with your assigned student</span></li>
+                            </ul>
+
+                            <button class="primary-button portal-button"
+                                    onclick="openAuth('patient','signup')">
+                                <span data-i18n="continueAsPatient">Continue as Patient</span>
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+
+                            <p class="portal-login">
+                                <span data-i18n="alreadyAccount">Already have an account?</span>
+                                <button onclick="openAuth('patient','login')" data-i18n="loginHere">Log in</button>
+                            </p>
+
+                        </article>
+
+
+                        <article class="portal-card doctor-portal">
+
+                            <div class="portal-card-top">
+                                <div class="portal-icon">
+                                    <i class="fa-solid fa-user-graduate"></i>
+                                </div>
+                                <span class="portal-label" data-i18n="doctorLabel">FOR DENTAL STUDENTS</span>
+                            </div>
+
+                            <h3 data-i18n="doctorPortalTitle">Your Clinical Journey.</h3>
+
+                            <p data-i18n="doctorPortalDescription">
+                                Explore publicly available dental cases,
+                                send requests to patients, manage accepted
+                                cases, and follow your clinical requirements.
+                            </p>
+
+                            <ul>
+                                <li><i class="fa-solid fa-check"></i><span data-i18n="doctorFeatureOne">Explore public dental cases</span></li>
+                                <li><i class="fa-solid fa-check"></i><span data-i18n="doctorFeatureTwo">Request and manage assigned cases</span></li>
+                                <li><i class="fa-solid fa-check"></i><span data-i18n="doctorFeatureThree">Track clinical requirements</span></li>
+                            </ul>
+
+                            <button class="primary-button portal-button doctor-button"
+                                    onclick="openAuth('doctor','signup')">
+                                <span data-i18n="continueAsDoctor">Continue as Dental Student</span>
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+
+                            <p class="portal-login">
+                                <span data-i18n="alreadyAccount">Already have an account?</span>
+                                <button onclick="openAuth('doctor','login')" data-i18n="loginHere">Log in</button>
+                            </p>
+
+                        </article>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- CONTACT -->
+            <section class="section section-container" id="contact">
+
+                <div class="contact-card">
+
+                    <div>
+                        <span class="eyebrow" data-i18n="contactEyebrow">STAY CONNECTED</span>
+
+                        <h2 data-i18n="contactTitle">
+                            A Better Dental Experience
+                            <span>Starts Here.</span>
+                        </h2>
+
+                        <p data-i18n="contactDescription">
+                            Discover a more organized way for patients
+                            and dental students to connect through clinical cases.
+                        </p>
+                    </div>
+
+                    <a href="#portals" class="primary-button contact-button">
+                        <span data-i18n="contactButton">Explore the Platform</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                </div>
+
+            </section>
+
+        </main>
+
+
+        <!-- FOOTER -->
+        <footer class="footer">
+
+            <div class="section-container">
+
+                <div class="footer-main">
+
+                    <div class="footer-brand">
+                        <a href="#home" class="brand">
+                            <div class="brand-icon">
+                                <i class="fa-solid fa-tooth"></i>
+                                <span class="brand-tech">
+                                    <i class="fa-solid fa-microchip"></i>
+                                </span>
+                            </div>
+
+                            <div class="brand-name">
+                                <h2>BNU <span>Dental Care</span></h2>
+                                <p>SMART DENTAL CASE PLATFORM</p>
+                            </div>
+                        </a>
+
+                        <p data-i18n="footerDescription">
+                            Connecting patients and dental students
+                            through a smarter clinical case experience.
+                        </p>
+                    </div>
+
+                    <div class="footer-column">
+                        <h4 data-i18n="footerExplore">Explore</h4>
+                        <a href="#about" data-i18n="navAbout">About</a>
+                        <a href="#services" data-i18n="navServices">Services</a>
+                        <a href="#how" data-i18n="navHow">How It Works</a>
+                    </div>
+
+                    <div class="footer-column">
+                        <h4 data-i18n="footerPortals">Portals</h4>
+                        <a href="#portals" data-i18n="patientLabel">Patients</a>
+                        <a href="#portals" data-i18n="doctorLabel">Dental Students</a>
+                    </div>
+
+                    <div class="footer-column">
+                        <h4 data-i18n="footerLegal">Information</h4>
+                        <a href="#" data-i18n="privacy">Privacy Policy</a>
+                        <a href="#" data-i18n="terms">Terms of Use</a>
+                    </div>
+
+                </div>
+
+                <div class="footer-bottom">
+                    <p>© <span id="currentYear"></span> BNU Dental Care. <span data-i18n="rights">All rights reserved.</span></p>
+                    <span data-i18n="footerTagline">Connecting patients with dental students through clinical cases.</span>
+                </div>
+
+            </div>
+
+        </footer>
+
+    </div>
+
+
+    <!-- AUTHENTICATION MODAL -->
+    <div class="auth-overlay hidden" id="authOverlay">
+
+        <div class="auth-modal">
+
+            <button class="modal-close" onclick="closeAuth()" aria-label="Close">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <div class="auth-brand">
+                <div class="brand-icon">
+                    <i class="fa-solid fa-tooth"></i>
+                    <span class="brand-tech">
+                        <i class="fa-solid fa-microchip"></i>
+                    </span>
+                </div>
+                <h2>BNU <span>Dental Care</span></h2>
+            </div>
+
+            <div class="auth-role-switch" id="authRoleSwitch" aria-label="Choose account type">
+                <button type="button" class="active" data-auth-role="patient" aria-pressed="true">Patient</button>
+                <button type="button" data-auth-role="doctor" aria-pressed="false">Dental Student</button>
+            </div>
+
+            <div class="auth-heading">
+                <span class="eyebrow" id="authEyebrow">PATIENT PORTAL</span>
+                <h2 id="authTitle">Create your account</h2>
+                <p id="authDescription">Join BNU Dental Care and start your journey.</p>
+            </div>
+
+            <div class="auth-tabs">
+                <button class="auth-tab active" id="signupTab"
+                        onclick="switchAuthMode('signup')">Sign Up</button>
+                <button class="auth-tab" id="loginTab"
+                        onclick="switchAuthMode('login')">Log In</button>
+            </div>
+
+            <form id="authForm">
+
+                <div class="form-field" id="nameField">
+                    <label for="authName">Full Name</label>
+                    <div class="input-wrap">
+                        <i class="fa-regular fa-user"></i>
+                        <input type="text" id="authName"
+                               placeholder="Enter your full name"
+                               autocomplete="name">
+                    </div>
+                </div>
+
+                <div class="form-field" id="emailField">
+                    <label for="authEmail">Email Address</label>
+                    <div class="input-wrap">
+                        <i class="fa-regular fa-envelope"></i>
+                        <input type="email" id="authEmail"
+                               placeholder="name@example.com"
+                               autocomplete="email">
+                    </div>
+                </div>
+
+                <div class="form-field" id="phoneField">
+                    <label for="authPhone">Phone Number</label>
+                    <div class="input-wrap">
+                        <i class="fa-solid fa-phone"></i>
+                        <input type="tel" id="authPhone"
+                               placeholder="Enter your phone number"
+                               autocomplete="tel">
+                    </div>
+                </div>
+
+                <div class="form-field" id="ageField">
+                    <label for="authAge">Age</label>
+                    <div class="input-wrap">
+                        <i class="fa-solid fa-calendar"></i>
+                        <input type="number" id="authAge"
+                               min="1" max="120" placeholder="Your age">
+                    </div>
+                </div>
+
+                <div class="form-field hidden" id="genderField">
+                    <label for="authGender">Gender</label>
+                    <div class="input-wrap">
+                        <i class="fa-solid fa-user"></i>
+                        <select id="authGender">
+                            <option value="">Select gender</option>
+                            <option value="female">Female</option>
+                            <option value="male">Male</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-field hidden" id="universityField">
+                    <label for="authUniversity">University</label>
+                    <div class="input-wrap">
+                        <i class="fa-solid fa-building-columns"></i>
+                        <input type="text" id="authUniversity"
+                               placeholder="Enter your university">
+                    </div>
+                </div>
+
+                <div class="form-field hidden" id="levelField">
+                    <label for="authLevel">Academic Level</label>
+                    <div class="input-wrap">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                        <select id="authLevel">
+                            <option value="">Select your academic level</option>
+                            <option>First Year</option>
+                            <option>Second Year</option>
+                            <option>Third Year</option>
+                            <option>Fourth Year</option>
+                            <option>Fifth Year</option>
+                            <option>Intern</option>
+                            <option>Graduate</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-field hidden" id="specialtyField">
+                    <label for="authSpecialty">Department / Specialty</label>
+                    <div class="input-wrap">
+                        <i class="fa-solid fa-tooth"></i>
+                        <select id="authSpecialty">
+                            <option value="">Select department</option>
+                            <option>Operative Dentistry</option>
+                            <option>Endodontics</option>
+                            <option>Prosthodontics</option>
+                            <option>Periodontics</option>
+                            <option>Oral Surgery</option>
+                            <option>Orthodontics</option>
+                            <option>Pediatric Dentistry</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-field" id="passwordField">
+                    <label for="authPassword">Password</label>
+                    <div class="input-wrap">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password" id="authPassword"
+                               placeholder="Create a password"
+                               autocomplete="new-password">
+                        <button type="button" class="password-toggle"
+                                onclick="togglePassword('authPassword',this)">
+                            <i class="fa-regular fa-eye"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="form-field" id="confirmPasswordField">
+                    <label for="authConfirmPassword">Confirm Password</label>
+                    <div class="input-wrap">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password" id="authConfirmPassword"
+                               placeholder="Confirm your password"
+                               autocomplete="new-password">
+                    </div>
+                </div>
+
+                <div class="form-error hidden" id="authError" role="alert"></div>
+
+                <button type="submit" class="primary-button full-button auth-submit"
+                        id="authSubmit">
+                    <span>Create Account</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+
+            </form>
+
+            <p class="auth-switch-text">
+                <span id="authSwitchPrompt">Already have an account?</span>
+                <button id="authSwitchButton" onclick="switchAuthMode('login')">Log In</button>
+            </p>
+
+            <p class="auth-disclaimer">
+                By continuing, you agree to our Terms of Use and Privacy Policy.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- TOAST NOTIFICATIONS -->
+    <div class="toast-container" id="toastContainer" aria-live="polite"></div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+
