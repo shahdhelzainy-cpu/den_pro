@@ -2335,6 +2335,73 @@ body #bnuDashboard.dashboard-dark .db-media-icon { background: #203b56; }
     body #bnuDashboard .db-field-wide { grid-column: auto; }
 }
 
+/* ---------- MOBILE DASHBOARD STABILITY ---------- */
+@media (max-width: 768px) {
+    body #bnuDashboard {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        min-height: 100dvh;
+        gap: 12px;
+        padding: max(12px, env(safe-area-inset-top)) 14px max(16px, env(safe-area-inset-bottom));
+        overflow-x: hidden;
+    }
+
+    body #bnuDashboard .db-header {
+        position: static;
+        width: 100%;
+        min-height: 60px;
+        flex-wrap: wrap;
+        gap: 9px;
+        margin: 0;
+    }
+
+    body #bnuDashboard .db-actions {
+        width: auto;
+        flex-wrap: nowrap;
+        gap: 6px;
+        margin-inline-start: auto;
+    }
+
+    body #bnuDashboard .db-user-chip { display: none; }
+
+    body #bnuDashboard .db-nav {
+        position: static;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 5px;
+        margin: 0;
+        overflow: visible;
+    }
+
+    body #bnuDashboard #dashboardContent {
+        width: 100%;
+        min-width: 0;
+        transform: none;
+    }
+
+    body #bnuDashboard #dashboardContent.db-content-leaving,
+    body #bnuDashboard #dashboardContent.db-content-entering {
+        transform: none;
+    }
+
+    body #bnuDashboard .db-chat-layout { grid-template-columns: minmax(0, 1fr); }
+    body #bnuDashboard .db-chat-list { grid-template-columns: minmax(0, 1fr); }
+}
+
+@media (max-width: 420px) {
+    body #bnuDashboard { padding-inline: 10px; }
+    body #bnuDashboard .db-header { padding: 9px; }
+    body #bnuDashboard .db-brand { font-size: 13px; }
+    body #bnuDashboard .db-brand-icon { width: 33px; height: 33px; }
+    body #bnuDashboard .db-actions .db-button.danger { margin-inline-start: 0; }
+    body #bnuDashboard .db-nav { padding: 8px; }
+    body #bnuDashboard .db-nav button { min-height: 42px; padding: 8px 7px; font-size: 10px; }
+    body #bnuDashboard .db-welcome { padding: 20px 17px; }
+    body #bnuDashboard .db-case { padding: 17px; }
+}
+
 /* ---------- BRAND MATCHED DASHBOARD CONTROLS ---------- */
 body #bnuDashboard .db-icon-button {
     display: grid;
@@ -3546,6 +3613,100 @@ body[dir="rtl"] #bnuDashboard.student-dashboard .db-welcome {
     }
 }
 
+/* ---------- STEADY MOBILE LANDING PAGE ---------- */
+@media (max-width: 850px) {
+    html { scroll-behavior: auto; }
+    body { overflow-x: clip; }
+
+    .hero-visual {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        align-content: start;
+        justify-items: center;
+        gap: 12px;
+        min-height: 0;
+        padding-block: 12px;
+        overflow: visible;
+        animation: none;
+    }
+
+    .hero-image-card {
+        grid-column: 1 / -1;
+        width: min(100%, 420px);
+    }
+
+    .tooth-main,
+    .orbit-one,
+    .orbit-two,
+    .floating-card,
+    .hero-content {
+        animation: none !important;
+        transform: none !important;
+    }
+
+    .floating-card {
+        position: relative;
+        inset: auto;
+        width: min(100%, 300px);
+        max-width: 100%;
+        min-height: 64px;
+        margin: 0 auto;
+    }
+
+    .floating-card-top,
+    .floating-card-bottom {
+        inset: auto;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 600px) {
+    .ambient { display: none; }
+
+    .hero {
+        gap: 16px;
+        padding-top: 44px;
+        padding-bottom: 28px;
+    }
+
+    .hero h1 { margin-top: 18px; }
+    .hero-trust { margin-top: 24px; }
+
+    .hero-visual {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 10px;
+        padding-top: 4px;
+    }
+
+    .hero-image-card {
+        width: 100%;
+        padding: 15px;
+        border-radius: 22px;
+    }
+
+    .visual-glow {
+        width: min(82vw, 300px);
+        height: min(82vw, 300px);
+        filter: blur(6px);
+        opacity: .45;
+    }
+
+    .tooth-illustration { height: 220px; }
+    .tooth-main { width: 128px; height: 128px; font-size: 70px; }
+    .orbit-one { width: 190px; height: 190px; }
+    .orbit-two { width: 235px; height: 235px; }
+
+    .floating-card {
+        width: min(100%, 360px);
+        justify-content: flex-start;
+        padding: 12px 14px;
+        border-radius: 13px;
+    }
+
+    .floating-card strong { font-size: 11px; }
+    .floating-card span { font-size: 10px; }
+}
+
 /* ---------- BILINGUAL AUTHENTICATION ROLE SWITCH ---------- */
 .auth-role-switch {
     display: grid;
@@ -3579,4 +3740,5 @@ body[dir="rtl"] #bnuDashboard.student-dashboard .db-welcome {
 
 body[dir="rtl"] .auth-role-switch { direction: rtl; }
 body #authRoleSwitch + .auth-heading { margin-top: 13px; }
+
 
